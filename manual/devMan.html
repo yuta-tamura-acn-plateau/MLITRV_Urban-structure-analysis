@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>環境構築手順書 </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="環境構築手順書 ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="環境構築手順書">環境構築手順書</h1>
+
+<h1 id="1-本書について">1 本書について</h1>
+<p>本書では、都市構造評価ツール（以下「本ツール」という。）の利用環境構築手順について記載しています。本ツールの構成や仕様の詳細については以下も参考にしてください。</p>
+<p><a href="https://www.mlit.go.jp/plateau/file/libraries/doc/plateau_tech_doc_0030_ver01.pdf">技術検証レポート</a></p>
+<h1 id="2-動作環境">2 動作環境</h1>
+<p>本システムの動作環境は以下のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>最小動作環境</th>
+<th>推奨動作環境</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>Microsoft Windows 10 または 11</td>
+<td>同左</td>
+</tr>
+<tr>
+<td>CPU</td>
+<td>Intel Core i3以上</td>
+<td>同左</td>
+</tr>
+<tr>
+<td>メモリ</td>
+<td>8GB以上</td>
+<td>同左</td>
+</tr>
+<tr>
+<td>ディスプレイ解像度</td>
+<td>1024×768以上</td>
+<td>同左</td>
+</tr>
+<tr>
+<td>ネットワーク</td>
+<td>【【3D都市モデルデータ読み込み】 各種プラグインをインストールできる環境が必要<br>【可視化】 オープンストリートマップを表示できる環境が必要 <a href="https://www.openstreetmap.org/#map">https://www.openstreetmap.org/#map</a></td>
+<td>同左</td>
+</tr>
+</tbody>
+</table>
+<h1 id="3-インストール手順">3 インストール手順</h1>
+<h2 id="1-qgisのインストール">1. QGISのインストール</h2>
+<p><a href="https://qgis.org/download/">こちら</a>
+からQGISをダウンロード、インストールします。</p>
+<h2 id="2-plateau-qgis-plugin-プラグインのインストール">2. PLATEAU QGIS Plugin プラグインのインストール</h2>
+<p>QGISのインストール後下記の手順を行ってください。</p>
+<h4 id="2-1-qgisを起動します">2-1. QGISを起動します。</h4>
+<p><img src="../resources/devMan/tutorial_001.png" alt=""></p>
+<h4 id="2-2-メニューのプラグインプラグインの管理とインストールを開きます">2-2. メニューのプラグイン&gt;プラグインの管理とインストールを開きます。</h4>
+<p><img src="../resources/devMan/tutorial_002.png" alt=""></p>
+<h4 id="2-3-検索バーにてplateauで検索しplateau-qgis-pluginをインストールします">2-3. 検索バーにて「PLATEAU」で検索しPLATEAU QGIS Pluginをインストールします。</h4>
+<p><img src="../resources/devMan/tutorial_003.png" alt=""></p>
+<h2 id="3-本ツールプラグインインストール">3. 本ツールプラグインインストール</h2>
+<h4 id="3-1-プラグインのダウンロード">3-1. プラグインのダウンロード</h4>
+<p><a href="https://github.com/Project-PLATEAU/Urban-structure-analysis/releases">こちら</a>
+から本ツールのプラグインをダウンロードします。</p>
+<h4 id="3-2-qgisを起動します">3-2. QGISを起動します。</h4>
+<p><img src="../resources/devMan/tutorial_001.png" alt=""></p>
+<h4 id="3-3-メニューのプラグインプラグインの管理とインストールを開きます">3-3. メニューのプラグイン&gt;プラグインの管理とインストールを開きます。</h4>
+<p><img src="../resources/devMan/tutorial_002.png" alt=""></p>
+<h4 id="3-4-zipからインストール画面を開きます">3-4. 「ZIPからインストール」画面を開きます。</h4>
+<p><img src="../resources/devMan/tutorial_004.png" alt=""></p>
+<h4 id="3-5-本プラグインのzipファイルを選択しインストールを実行します">3-5. 本プラグインのZIPファイルを選択し、「インストール」を実行します。</h4>
+<p><img src="../resources/devMan/tutorial_005.png" alt=""></p>
+<p>自身でソースファイルをダウンロードし、QGISのプラグインフォルダに展開することでもインストール可能です。<br>
+ソースファイルは
+<a href="https://github.com/Project-PLATEAU/Urban-structure-analysis/">こちら</a>
+からダウンロード可能です。</p>
+<p>QGISのインストール後、
+C:\Users{UserName}\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins
+に本ツールのプラグインソースファイルを展開します。</p>
+<p><img src="../resources/devMan/tutorial_006.png" alt=""></p>
+<h1 id="4-準備物一覧">4 準備物一覧</h1>
+<p>アプリケーションを利用するために以下のデータを入手します。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>データ種別</th>
+<th>機能</th>
+<th>用途</th>
+<th>入力方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>【IF001】3D都市モデル(CityGML)G空間情報センターから取得します。<br> <a href="https://front.geospatial.jp/">https://front.geospatial.jp/</a></td>
+<td>評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+<tr>
+<td>②</td>
+<td>【IF002】ゾーンポリゴン<br>小地域（基本単位区 JGD2011）境界データをe-stat から取得します。<br> <a href="https://www.e-stat.go.jp/gis">https://www.e-stat.go.jp/gis</a></td>
+<td>評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+<tr>
+<td>③</td>
+<td>【IF003】鉄道駅位置<br> 鉄道駅位置（ライン）データを国土数値情報から取得します。 <br>https://nlftp.mlit.go.jp/ksj</td>
+<td>評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+<tr>
+<td>④</td>
+<td>【IF004】道路ネットワーク<br> OpenStreetMapデータをgeofabrikから取得します。 <br> <a href="https://download.geofabrik.de/asia/japan.html">https://download.geofabrik.de/asia/japan.html</a></td>
+<td>評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+<tr>
+<td>⑤</td>
+<td>【IF005】施設ポイントデータ<br> 各施設（ポイント）データを国土数値情報から取得します。(医療施設、学校、行政施設、福祉施設、文化施設) <br>https://nlftp.mlit.go.jp/ksj</td>
+<td>評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+<tr>
+<td>⑥</td>
+<td>【IF006】 避難施設情報<br> 避難施設（ポイント）データを国土数値情報から取得します。 <br>https://nlftp.mlit.go.jp/ksj</td>
+<td>評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+<tr>
+<td>⑦</td>
+<td>【IF007】 鉄道ネットワーク<br> 鉄道（ライン）データを国土数値情報から取得します。 <br>https://nlftp.mlit.go.jp/ksj</td>
+<td>評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+<tr>
+<td>⑧</td>
+<td>【IF008】 バス停位置<br> GTFS JP 形式で作成されたデータ</td>
+<td>評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+<tr>
+<td>⑨</td>
+<td>【IF009】 バスネットワーク<br> GTFS JP 形式で作成されたデータ</td>
+<td>評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+<tr>
+<td>⑩</td>
+<td>【IF010】 国勢調査メッシュ別データ<br> e-statから取得します。<br> <a href="https://www.e-stat.go.jp/gis%C2%A0%7C">https://www.e-stat.go.jp/gis |</a> 評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+<td></td>
+</tr>
+<tr>
+<td>⑪</td>
+<td>【IF011】 メッシュ別将来推計人口データ<br> 500mメッシュの将来推計人口データを国土数値情報から取得します。<br> <a href="https://nlftp.mlit.go.jp/ksj">https://nlftp.mlit.go.jp/ksj</a></td>
+<td>評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+<tr>
+<td>⑫</td>
+<td>【IF012】250mメッシュポリゴンデータ<br> 250mメッシュ境界データをe-statから取得します。<br> <a href="https://www.e-stat.go.jp/gis">https://www.e-stat.go.jp/gis</a></td>
+<td>評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+<tr>
+<td>⑬</td>
+<td>【IF013】ハザードエリア<br> 洪水浸水想定区域（1次メッシュ単位）データ、高潮浸水想定区域（ポリゴン）データ、津波浸水想定（ポリゴン）データ、土砂災害警戒区域（ポリゴン）（ライン）データを国土数値情報から取得します。<br> <a href="https://nlftp.mlit.go.jp/ksj">https://nlftp.mlit.go.jp/ksj</a></td>
+<td>評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+<tr>
+<td>⑭</td>
+<td>【IF014, IF015, IF019, IF020】都市機能誘導区域,居住誘導区域, 都市計画区域, 用途地域 <br> 立地適正化計画区域（xxxxx_ritteki.shp）、都市計画区域（xxxxx_tokei.shp）、用途地域（xxxxx_youto.shp）データを都市計画決定GISオープンデータから取得します。<br> <a href="https://www.mlit.go.jp/toshi/tosiko/toshi_tosiko_tk_000087.html">https://www.mlit.go.jp/toshi/tosiko/toshi_tosiko_tk_000087.html</a></td>
+<td>評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+<tr>
+<td>⑮</td>
+<td>【IF016】交通流動<br> 交通流動量 パーソントリップ発生・集中量データを国土数値情報から取得します。<br> <a href="https://nlftp.mlit.go.jp/ksj">https://nlftp.mlit.go.jp/ksj</a></td>
+<td>評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+<tr>
+<td>⑯</td>
+<td>【IF017】地価公示<br> 地価公示（ポイント） データを国土数値情報から取得します。<br> <a href="https://nlftp.mlit.go.jp/ksj">https://nlftp.mlit.go.jp/ksj</a></td>
+<td>評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+<tr>
+<td>⑰</td>
+<td>【IF019】空き家<br> 空き家ポイントデータ（シェープファイル）を作成します。</td>
+<td>評価指標算出機能</td>
+<td>全般</td>
+<td>格納フォルダパス指定</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

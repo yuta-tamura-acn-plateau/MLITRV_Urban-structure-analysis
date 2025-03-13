@@ -8,10 +8,6 @@ src/**/*.egg-info/
 src/.idea/
 .vscode/
 
-# Qtリソースのコンパイル済みファイル（再生成可能）
-src/**/*.qm
-src/resources.pyc
-
 # OSが生成する不要なファイル
 .DS_Store
 Thumbs.db
@@ -24,13 +20,9 @@ desktop.ini
 # テスト関連（リリースには不要）
 src/test/
 src/scripts/
-src/help/
-src/i18n/*.ts
-src/i18n/plateaustatisticsvisualizationplugin.pro
-src/i18n/PlateauStatisticsVisualizationPlugin_ja.qm
 
 # データファイル（オープンソース対象外）
-src/data/*.csv
+src/data/
 
 # 開発環境用の設定ファイル
 src/pylintrc

@@ -38,25 +38,12 @@ QGISのインストール後下記の手順を行ってください。
 
 ## 3. 本ツールプラグインインストール
 #### 3-1. プラグインのダウンロード
-[こちら](https://github.com/Project-PLATEAU/Urban-structure-analysis/releases)
-から本ツールのプラグインをダウンロードします。
-#### 3-2. QGISを起動します。
-![](../resources/devMan/tutorial_001.png)
-#### 3-3. メニューのプラグイン>プラグインの管理とインストールを開きます。
-![](../resources/devMan/tutorial_002.png)
-#### 3-4. 「ZIPからインストール」画面を開きます。
-![](../resources/devMan/tutorial_004.png)
-#### 3-5. 本プラグインのZIPファイルを選択し、「インストール」を実行します。
-![](../resources/devMan/tutorial_005.png)
-
-自身でソースファイルをダウンロードし、QGISのプラグインフォルダに展開することでもインストール可能です。\
-ソースファイルは
 [こちら](https://github.com/Project-PLATEAU/Urban-structure-analysis/)
-からダウンロード可能です。
+から本ツールのソースコードをダウンロード可能です。
 
-QGISのインストール後、
+QGISのインストール後、ダウンロードしたソースコードのsrcフォルダの名前を変更し、
 C:\Users\{UserName}\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins
-に本ツールのプラグインソースファイルを展開します。
+配下に配置します。
 
 ![](../resources/devMan/tutorial_006.png)
 
